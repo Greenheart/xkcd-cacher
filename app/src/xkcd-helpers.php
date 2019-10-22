@@ -18,15 +18,14 @@ function get_xkcd_if_not_already_cached($xkcd_num) {
     if ($cached_xkcd) {
         return array(
             'message' => "Cached xkcd comic {$xkcd_num} from Postgres",
-            'data' => $cached_xkcd);    
+            'data' => $cached_xkcd);
     } else {
         $comic = fetch_xkcd($xkcd_num);
 
         if ($comic) {
             $result = save_xkcd($comic);
-            echo $result;
             
-            return $comic;
+            return $result;
         }
 
         return null;
