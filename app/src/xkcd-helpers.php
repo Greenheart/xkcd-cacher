@@ -39,7 +39,7 @@ function fetch_xkcd($xkcd_num) {
     
     try {
         // Use @ to supress warning
-        $response = @file_get_contents("https://xkcd.com/{$xkcd_num}/info.12.json");
+        $response = @file_get_contents("https://xkcd.com/{$xkcd_num}/info.0.json");
 
         // Handle failed requests.
         // This is required since file_get_contents() throws warnings, rather than exceptions.
