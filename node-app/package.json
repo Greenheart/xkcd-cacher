@@ -1,0 +1,21 @@
+{
+    "name": "xkcd-node-app",
+    "version": "1.0.0",
+    "description": "View xkcd comics from a local PostgreSQL DB.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "start:dev": "nodemon --inspect=0.0.0.0:9229 index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.16.4",
+        "pg": "^7.9.0"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.11"
+    }
+}

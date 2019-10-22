@@ -17,6 +17,18 @@ services:
         networks:
             app-env:
 
+    node-app:
+        build: ./node-app
+        image: node-app
+        container_name: node-app
+        depends_on:
+            - postgres
+        ports:
+            - '3000:3000'
+            - '9229:9229'
+        networks:
+            app-env:
+
     postgres:
         image: postgres:9.6
         container_name: postgres
