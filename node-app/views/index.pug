@@ -1,0 +1,23 @@
+html
+  head
+    title= 'xkcd cacher | Node.js Frontend'
+  body
+    h1 xkcd cacher | Node.js Frontend
+    p These comics have been cached by a PHP script.
+    p Visit #[a(href="http://localhost") http://localhost] to add more comics.
+    each comic in comics
+        div
+            h3
+                div
+                    span= comic.safe_title + ' - '
+                    a(
+                        href="https://xkcd.com/" + comic.num
+                        target='_blank'
+                    )= '#' + comic.num
+                    span= ' - ' + comic.year
+            img(
+                src=comic.img
+                alt=comic.alt
+            )
+    else
+        p 🤯 There are no comics cached in Postgres yet.
