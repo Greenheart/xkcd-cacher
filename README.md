@@ -42,11 +42,11 @@ First, make sure `docker` and `docker-compose` are installed. Then run the follo
 $ docker-compose up -d
 ```
 
-Access PHP app on http://localhost:80 and submit the form:
+Access PHP app on http://localhost to get started.
 
-<img width="292"  alt="screen shot 2017-08-17 at 19 28 23" src="https://user-images.githubusercontent.com/14105387/29425231-ceab73aa-8382-11e7-9ec3-47b0b159d833.png">
+## Optional:
 
-Visit http://localhost:5050
+Visit http://localhost:5050 to inspect PostgreSQL with pgadmin.
 Default credentials are:
 
 -   username: pgadmin@mail.com
