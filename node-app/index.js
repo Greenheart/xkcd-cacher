@@ -12,7 +12,7 @@ app.set('view engine', 'pug')
 
 app.get('/', async (req, res) => {
     const result = await pool
-        .query('SELECT * from xkcd')
+        .query('SELECT num, safe_title, year, img, alt from xkcd')
         .catch(err => console.error(err))
 
     res.render('index', { comics: result.rows })
@@ -21,7 +21,7 @@ app.get('/', async (req, res) => {
 app.get('/ping', async (req, res) => {
     const database = await pool
         .query('SELECT NOW()')
-        .then(res => (res && res) || 'online')
+        .then(res => res || 'online')
         .catch(() => 'Postgres failed to connect')
 
     res.send({
