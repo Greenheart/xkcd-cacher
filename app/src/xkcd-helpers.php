@@ -13,7 +13,7 @@ function get_xkcd_if_not_already_cached($xkcd_num) {
         'num' => $xkcd_num
     ));
 
-    $cached_xkcd = $statement->fetch();
+    $cached_xkcd = $statement->fetchObject();
 
     if ($cached_xkcd) {
         return array(
