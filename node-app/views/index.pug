@@ -8,13 +8,12 @@ html
     each comic in comics
         div
             h3
-                div
-                    span= comic.safe_title + ' - '
-                    a(
-                        href="https://xkcd.com/" + comic.num
-                        target='_blank'
-                    )= '#' + comic.num
-                    span= ' - ' + comic.year
+                span= comic.safe_title + ' - '
+                a(
+                    href="https://xkcd.com/" + comic.num
+                    target='_blank'
+                )= '#' + comic.num
+                span= ' - ' + comic.year
             img(
                 src=comic.img
                 alt=comic.alt
